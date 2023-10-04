@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinkit</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="https://blinkit.com/images/faviconChange.ico" />
+
+</head>
+
+<body>
+
+
+    <!-- Nav-bar -->
+
+    <nav class="d-flex justify-content-between align-items-center px-4  border-bottom">
+
+        <a href="#"><svg width="134" height="30" viewBox="0 0 114 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.3342 7.186C16.2619 7.186 17.9832 7.66644 19.4978 8.62732C21.0262 9.57447 22.2242 10.9197 23.0917 12.663C23.9316 14.3377 24.3516 16.3075 24.3516 18.5724C24.3516 20.7687 23.9316 22.7316 23.0917 24.4612C22.2517 26.1908 21.0675 27.5429 19.5391 28.5175C17.9969 29.5058 16.2619 30 14.3342 30C12.9297 30 11.6078 29.7117 10.3685 29.1352C9.12927 28.5587 8.06901 27.7488 7.18775 26.7056V29.4852H0V0H7.18775V10.4598C8.06901 9.41661 9.12927 8.61359 10.3685 8.05079C11.6078 7.47426 12.9297 7.186 14.3342 7.186ZM12.1861 24.0494C13.2051 24.0494 14.1139 23.8161 14.9125 23.3493C15.7112 22.8826 16.3377 22.2306 16.7921 21.3933C17.2465 20.5697 17.4737 19.6294 17.4737 18.5724C17.4737 17.5429 17.2465 16.6095 16.7921 15.7721C16.3377 14.9348 15.7112 14.2828 14.9125 13.8161C14.1139 13.3493 13.2051 13.116 12.1861 13.116C11.2223 13.116 10.3617 13.3493 9.60432 13.8161C8.84699 14.269 8.2549 14.9073 7.82804 15.731C7.40118 16.5683 7.18775 17.5154 7.18775 18.5724C7.18775 19.6294 7.40118 20.5765 7.82804 21.4139C8.2549 22.2375 8.84699 22.8826 9.60432 23.3493C10.3617 23.8161 11.2223 24.0494 12.1861 24.0494Z"
+                    fill="#F8CB46"></path>
+                <path d="M25.3356 29.4852V0H32.5233V29.4852H25.3356Z" fill="#F8CB46"></path>
+                <path d="M34.5607 29.4852V7.68016H41.7071V29.4852H34.5607Z" fill="#F8CB46"></path>
+                <path
+                    d="M57.2319 7.186C58.7603 7.186 60.1372 7.5429 61.3627 8.25669C62.5882 8.95676 63.5521 9.94509 64.2544 11.2217C64.9291 12.512 65.2664 13.9739 65.2664 15.6074V29.4852H58.4092V17.2135C58.4092 16.4173 58.2508 15.7104 57.9341 15.0927C57.6312 14.4612 57.1974 13.9739 56.6329 13.6307C56.0821 13.2876 55.4349 13.116 54.6914 13.116C53.9891 13.116 53.3419 13.2876 52.7498 13.6307C52.1577 13.9602 51.6965 14.4132 51.366 14.9897C51.0218 15.5388 50.8496 16.1839 50.8496 16.9252L50.8083 29.4852H43.6619V7.68016H50.8083V10.1716C51.483 9.23816 52.3849 8.51064 53.5141 7.98902C54.6432 7.45367 55.8824 7.186 57.2319 7.186Z"
+                    fill="#F8CB46"></path>
+                <path
+                    d="M81.0597 17.2135L89.1769 29.4852H81.0597L76.3091 21.7639L74.1198 24.2965V29.4852H66.932V0H74.1198V16.2869L81.0184 7.68016H89.1356L81.0597 17.2135Z"
+                    fill="#F8CB46"></path>
+                <path d="M34.5569 0.00232667H41.7267V5.59207H34.5569V0.00232667Z" fill="#F8CB46"></path>
+                <path d="M90.3176 29.4198V7.61479H97.464V29.4198H90.3176Z" fill="#54B226"></path>
+                <path
+                    d="M112.575 23.2634L114 27.855C113.353 28.4727 112.534 28.9737 111.542 29.3581C110.564 29.7424 109.607 29.9346 108.671 29.9346C107.322 29.9346 106.117 29.6395 105.057 29.0492C103.996 28.4452 103.17 27.6079 102.578 26.5372C101.986 25.494 101.69 24.2929 101.69 22.9339V13.3183H98.819V7.61479H101.69V0.00241089H108.547V7.61479H113.071V13.3183H108.547V21.6161C108.547 22.3162 108.733 22.8859 109.105 23.3251C109.477 23.7644 109.952 23.984 110.53 23.984C110.943 23.984 111.329 23.9223 111.687 23.7987C112.045 23.6752 112.341 23.4967 112.575 23.2634Z"
+                    fill="#54B226"></path>
+                <path d="M90.2609 0.00241089H97.4307V5.59215H90.2609V0.00241089Z" fill="#54B226"></path>
+            </svg></a>
+
+        <div class="vertical-line"></div>
+
+        <div class="nav-delivery">
+
+
+            <h6> Delivery in 12 minutes</h6>
+
+            <p>Delhi, India <i class="fa-solid fa-caret-down"></i></p>
+
+
+        </div>
+
+        <div id="my-nav-search">
+
+            <!-- icon -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Search 'butter'">
+
+        </div>
+        <button class="btn fs-4 mx-3">Login</button>
+
+
+        <button class="btn btn-success px-2.5 py-3 mx-3 my-cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            My Cart</button>
+
+    </nav>
+
+
+    <!-- Hero- section -->
+
+    <section class="d-flex justify-content-center" id="hero-section">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=900/layout-engine/2022-05/Group-33704.jpg"
+            alt="paan corner banner" width="1280" height="234.8623853211009" loading="eager"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+
+    </section>
+
+    <!-- second -->
+
+    <section class="scroll-container">
+
+        <div class="list">
+
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/layout-engine/2023-07/electronics-WEB.jpg"
+                alt="masthead_web_electronic_store" width="335.40000000000003" height="195" loading="lazy"
+                style="border-radius: 16px; object-fit: fill; cursor: default;">
+
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/layout-engine/2023-07/pharmacy-WEB.jpg"
+                alt="masthead_web_pharma" width="335.40000000000003" height="195" loading="lazy"
+                style="border-radius: 16px; object-fit: fill; cursor: default;">
+
+
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/layout-engine/2023-03/babycare-WEB.jpg"
+                alt="masthead_web_baby_care" width="335.40000000000003" height="195" loading="lazy"
+                style="border-radius: 16px; object-fit: fill; cursor: default;">
+
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/layout-engine/2023-07/Pet-Care_WEB.jpg"
+                alt="masthead_web_pet_care" width="335.40000000000003" height="195" loading="lazy"
+                style="border-radius: 16px; object-fit: fill; cursor: default;">
+
+
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=270/layout-engine/2023-07/electronics-WEB.jpg"
+                alt="masthead_web_electronic_store" width="335.40000000000003" height="195" loading="lazy"
+                style="border-radius: 16px; object-fit: fill; cursor: default;">
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section id="categories-1">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-12/paan-corner_web.png"
+            alt="1 - Paan Corner" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-2_10.png"
+            alt="2 - Dairy, Bread &amp; Eggs" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-3_9.png"
+            alt="3 - Fruits &amp; Vegetables" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-4_9.png"
+            alt="4 - Cold Drinks &amp; Juices " width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-12/paan-corner_web.png"
+            alt="1 - Paan Corner" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-5_4.png"
+            alt="5 - Snacks &amp; Munchies " width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-6_5.png"
+            alt="6 - Breakfast &amp; Instant Food" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-7_3.png"
+            alt="7 - Sweet Tooth" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-8_4.png"
+            alt="8 - Bakery &amp; Biscuits" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-9_3.png"
+            alt="9 - Tea, Coffee &amp; Health Drink " width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-10.png"
+            alt="10 - Atta, Rice &amp; Dal" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-11.png"
+            alt="11 - Masala, Oil &amp; More " width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-12.png"
+            alt="12 - Sauces &amp; Spreads" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-13.png"
+            alt="13 - Chicken, Meat &amp; Fish " width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-14.png"
+            alt="14 - Organic &amp; Healthy Living" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-15.png"
+            alt="15 - Baby Care" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-16.png"
+            alt="16 - Pharma &amp; Wellness" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-17.png"
+            alt="17 - Clening Essentials" width="120" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-18.png"
+            alt="18 - Home &amp; Office " width="128" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/layout-engine/2022-11/Slice-19.png"
+            alt="19 - Personal Care" width="128" height="188.23529411764704" loading="lazy"
+            style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+
+    </section>
+
+
+    <!-- Next components -->
+
+    <section class="category">
+
+        <div class="d-flex justify-content-between">
+
+            <h2>Dairy, Breads & Eggs</h2>
+
+            <h4 class="text-success">see all</h4>
+
+        </div>
+
+
+        <div class="list mt-3">
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg?ts=1688463545"
+                    alt="Nestle Milkmaid Sweetened Condensed Milk" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Nestle Milkmaid Sweetened Condensed...</h6>
+
+                <p class="product-weight">380 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹360</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+                <div class="my-tag">30% OFF</div>
+
+
+            </div>
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/24194a.jpg?ts=1690806087"
+                    alt="Harvest Gold Hearty Brown Bread" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Harvest Gold Hearty Brown Bread...</h6>
+
+                <p class="product-weight">400 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹40</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/168a.jpg?ts=1689327537"
+                    alt="Amul Pure Milk Cheese Slices" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Amul Pure Milk Cheese Slices...</h6>
+
+                <p class="product-weight">200 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹140</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/160a.jpg?ts=1689327537"
+                    alt="Amul Salted Butter" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Amul Salty Butter under ratable ...</h6>
+
+                <p class="product-weight">500 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹460</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/366421a.jpg?ts=1690814947"
+                    alt="Saras Curd" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Saras Curd with Fresh Milk...</h6>
+
+                <p class="product-weight">200 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹16</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/230658a.jpg?ts=1687949310"
+                    alt="Saras Paneer" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Saras Paneer with Fresh Milk..</h6>
+
+                <p class="product-weight">200 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹70</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/439697a.jpg?ts=1688471557"
+                    alt="Amul Blend Diced Cheese" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    10 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Amul Blend diet Cheese (200 q)...</h6>
+
+                <p class="product-weight">200 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹260</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <section class="category">
+
+        <div class="d-flex justify-content-between">
+
+            <h2 class="mt-5 mb-2">Rolling paper & tobacco</h2>
+
+            <h4 class="text-success mt-5 mb-2">see all</h4>
+
+        </div>
+
+
+        <div class="list mt-3">
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/496996a.jpg?ts=1690814374"
+                    alt="Brown Rolling Paper Cones - Stash Pro" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Brown Rolling Paper Cones - Stash Pro...</h6>
+
+                <p class="product-weight">6 pieces</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹90</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+                <div class="my-tag">30% OFF</div>
+
+
+            </div>
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/478728a.jpg?ts=1690814280"
+                    alt="Ultimate Rolling Paper with Filter Tips &amp; Crushing Tray (King Size, Unbleached) - Mozo"
+                    width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Ultimate Rolling Paper with Filter Tips &...</h6>
+
+                <p class="product-weight">1pack (64 pieces)</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹90</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/496994a.jpg?ts=1690814628"
+                    alt="Brown Rolling Paper + Roach with Crushing Tray - Stash Pro" width="140" height="140"
+                    loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Brown Rolling Paper + Roach with Crushing...</h6>
+
+                <p class="product-weight">1 pack</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹222</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/480960a.jpg?ts=1690815001"
+                    alt="Slim Rolling Paper (King Size, Mello Mango Flavoured) - Juicy Jay's" width="140" height="140"
+                    loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Slim Rolling Paper (King Size, Mello Mango...</h6>
+
+                <p class="product-weight">1 pack (32pieces)</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹220</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/480945a.jpg?ts=1690814962"
+                    alt="Slim Rolling Paper (King Size, Cotton candy flavoured) - Juicy Jay's" width="140" height="140"
+                    loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Slim Rolling Paper (King Size, Cotton candy...</h6>
+
+                <p class="product-weight">1 pack (32 pieces)</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹220</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/480959a.jpg?ts=1690814336"
+                    alt="Slim Rolling Paper (King Size, Green Apple Flavoured) - Juicy Jay's" width="140" height="140"
+                    loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Slim Rolling Paper (King Size, Green Apple..</h6>
+
+                <p class="product-weight">1 pack(32pieces)</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹220</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/477311a.jpg?ts=1692701354"
+                    alt="Brown Rolling Paper (King Size) - Stash Pro" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Brown Rolling Paper (King Size) - Stash Pro...</h6>
+
+                <p class="product-weight">1unit (32 pieces)</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹50</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <section class="category">
+
+        <div class="d-flex justify-content-between">
+
+            <h2 class="mt-5 mb-2">Snacks & Munchies</h2>
+
+            <h4 class="text-success mt-5 mb-2">see all</h4>
+
+        </div>
+
+
+        <div class="list mt-3">
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/60434a.jpg?ts=1688627218"
+                    alt="Bikaji Baat Cheet Moong Dal and Urad Dal Papad" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Bikaji Baat Cheet Moong Dal and Urad...</h6>
+
+                <p class="product-weight">400gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p>₹130</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+                <div class="my-tag">30% OFF</div>
+
+
+            </div>
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/240092a.jpg?ts=1687324818"
+                    alt="Lay's India's Magic Masala Chips (40 g)" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Lay's India's Magic Masala Chips (40 g)...</h6>
+
+                <p class="product-weight">40gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹20</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/446890a.jpg?ts=1688634170"
+                    alt="Bikano Boondi Namkeen" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Bikano Boondi Namkeen...</h6>
+
+                <p class="product-weight">250gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹59</p>
+
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/385313a.jpg?ts=1688630458"
+                    alt="Mr. Makhana Pudina Party Makhana" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Mr. Makhana Pudina Party Makhana...</h6>
+
+                <p class="product-weight">25gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹48</p>
+
+
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/60433a.jpg?ts=1686225013"
+                    alt="Bikaji Dil Khush Moong Dal and Urad Dal Papad" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Bikaji Dil Khush Moong Dal and Urad Dal Papad...</h6>
+
+                <p class="product-weight">400gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹130</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/402916a.jpg?ts=1687328281"
+                    alt="Cornitos Nacho Crisps &amp; Dip Combo" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Cornitos Nacho Crisps & Dip Combo...</h6>
+
+                <p class="product-weight">30g + 1unit</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹68</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/481019a.jpg?ts=1687951096"
+                    alt="DNV Sabudana Papad" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    22 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">DNV Sabudana Papad (100 gm)...</h6>
+
+                <p class="product-weight">100gm</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹48</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <section class="category">
+
+        <div class="d-flex justify-content-between">
+
+            <h2 class="mt-5 mb-2">Cold Drinks & Juices</h2>
+
+            <h4 class="text-success mt-5 mb-2">see all</h4>
+
+        </div>
+
+
+        <div class="list mt-3">
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/20143a.jpg?ts=1687525090"
+                    alt="Real Fruit Power Cranberry Juice" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Real Fruit Power Cranberry Juice...</h6>
+
+                <p class="product-weight">1 L</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹120</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+                <div class="my-tag">30% OFF</div>
+
+
+            </div>
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/97250a.jpg?ts=1688628274"
+                    alt="Maaza Mango Drink 1.2 l" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Maaza Mango Drink Flavoured Juice...</h6>
+
+
+                <p class="product-weight">1.2 L</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹74</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/34353a.jpg?ts=1690814578"
+                    alt="Bisleri Packaged Water" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Bisleri Pack water & clean water...</h6>
+
+                <p class="product-weight">5 L</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹70</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/359a.jpg?ts=1679035808"
+                    alt="Real Activ Fibre+ Multi Fruit Juice" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Real Activ Fibre+ Multi Fruit Juice...</h6>
+
+                <p class="product-weight">1 L</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹112</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/385a.jpg?ts=1689327544"
+                    alt="Red Bull Energy Drink (250 ml)" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Red Bull Energy Drink (250 ml)...</h6>
+
+                <p class="product-weight">250 ml</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹125</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/314a.jpg?ts=1690814449"
+                    alt="Thums Up Soft Drink (750 ml)" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Thums Up Soft Drink (750 ml)...</h6>
+
+                <p class="product-weight">750 ml</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹40</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/122997a.jpg?ts=1688628277"
+                    alt="Kinley Soda Water With Extra Punch" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">
+                    Kinley Soda Water With Extra Punch...</h6>
+
+                <p class="product-weight">750 ml</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹20</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <section class="category">
+
+        <div class="d-flex justify-content-between">
+
+            <h2 class="mt-5 mb-2">Candies & Gums</h2>
+
+            <h4 class="text-success mt-5 mb-2">see all</h4>
+
+        </div>
+
+
+        <div class="list mt-3">
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/105159a.jpg?ts=1688443502"
+                    alt="Orbit Spearmint Flavour Sugar Free Chewing Gum" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Orbit Spearmint Flavour Sugar Free Chewing...</h6>
+
+                <p class="product-weight">22 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹20</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+                <div class="my-tag">30% OFF</div>
+
+
+            </div>
+
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/481313a.jpg?ts=1687333270"
+                    alt="Nicotex Mint Nicotine Gum (Sugar Free)" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Nicotex Mint Nicotine Gum (Sugar Free)...</h6>
+
+                <p class="product-weight">25 pieces</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹284</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/440073a.jpg?ts=1691835531"
+                    alt="Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    15 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Orbit Mixed Fruit Flavour Chewing Gum...</h6>
+
+                <p class="product-weight">22 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹50</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/429851a.jpg?ts=1690813268"
+                    alt="Happydent Wave Sugar Free Chewing Gum 18 Pcs" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Center Fruit Liquid Filled Pineapple...</h6>
+
+                <p class="product-weight">28.9 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹46</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/495586a.jpg?ts=1690813422"
+                    alt="Center Fresh Sugar Free Mint Candy" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Happydent Wave Sugar Free Chewing Gum 18...</h6>
+
+                <p class="product-weight">35 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹90</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/440075a.jpg?ts=1688471561"
+                    alt="Wrigley's Doublemint Peppermint Candy" width="140" height="140" loading="lazy"
+                    style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Center Fresh Sugar Free Mint Candy...</h6>
+
+                <p class="product-weight">30 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹50</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+            <div class="card my-card shadow p-3">
+
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/495587a.jpg?ts=1680680930"
+                    alt="Center Fruit Liquid Filled Pineapple Chewing Gum (Tennis Ball Shape)" width="140" height="140"
+                    loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+                <div class="time">
+                    <i class="fa-solid fa-stopwatch-20" style="color: #1f5122;"></i>
+                    20 MINS
+                </div>
+
+                <h6 class="card-text my-card-text">Wrigley's Doublemint Peppermint Candy...</h6>
+
+                <p class="product-weight">32.55 q</p>
+
+                <div class=" row-3 d-flex justify-content-between align-items-baseline">
+
+
+                    <p> ₹50</p>
+
+                    <button class="btn btn-outline-success px-4 fw-bold rounded-2">ADD</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div id="my-footer-row-1">
+
+            <div id="footer_table_1">
+
+                <h5>Userful Links</h5>
+
+                <table>
+
+                    <tr>
+
+                        <td>About</td>
+                        <td>Privacy</td>
+                        <td> Partner</td>
+                    </tr>
+                    <tr>
+
+                        <td>Career</td>
+                        <td>Terms</td>
+                        <td> Express</td>
+                    </tr>
+                    <tr>
+
+                        <td>Blog</td>
+                        <td>FAQs</td>
+                        <td> Seller</td>
+                    </tr>
+                    <tr>
+
+                        <td>Press</td>
+                        <td>Security</td>
+                        <td> Spotlight</td>
+                    </tr>
+                    <tr>
+
+                        <td>Lead</td>
+                        <td>Mobile</td>
+                        <td> Warehouse</td>
+                    </tr>
+                    <tr>
+
+                        <td>Value</td>
+                        <td>Contact</td>
+                        <td> Deliver</td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+
+
+            <div id="footer_table_2">
+
+                <h5>Categories <span class="text-success p-3 fs-5 see">see all</span></h5>
+
+
+
+                <table>
+
+                    <tr>
+                        <td>Vegetables & Fruits</td>
+                        <td>Dairy & Breakfast</td>
+                        <td>Munchies</td>
+                    </tr>
+                    <tr>
+                        <td>Cold Drinks & Juices</td>
+                        <td>Instant & Frozen Food</td>
+                        <td>Tea, Coffee & Health Drinks</td>
+                    </tr>
+                    <tr>
+                        <td>Bakery & Biscuits
+
+                        </td>
+                        <td>Sweet Tooth</td>
+                        <td> Atta, Rice & Dal</td>
+                    </tr>
+                    <tr>
+                        <td>Dry Fruits, Masala & Oil
+
+                        </td>
+                        <td> Sauces & Spreads</td>
+                        <td>Chicken, Meat & Fish</td>
+                    </tr>
+                    <tr>
+                        <td>Organic & Premium
+
+                        </td>
+                        <td>Paan Corner</td>
+                        <td> Baby Care</td>
+                    </tr>
+                    <tr>
+                        <td>Vegetables & Fruits</td>
+                        <td>Dairy & Breakfast</td>
+                        <td>Munchies</td>
+                    </tr>
+                    <tr>
+                        <td>Pharma & Wellness
+
+                        </td>
+                        <td> Cleaning Essentials</td>
+                        <td> Home & Office</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Creams & Frozen Desserts
+
+                        </td>
+                        <td>Personal Care</td>
+                        <td>Pet Care</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+        <div id="my-footer-row-2">
+
+            <div id="footer_row_2_col1">
+                <p>© Blink Commerce Private Limited (formerly known as Grofers India Private
+                    Limited), 2016-2023</p>
+            </div>
+            <div id="footer_row_2_col2">
+
+                <h6>Download App</h6>
+
+                <div class="box">
+                    <i class="fa-brands fa-apple"></i>
+                    AppStore
+                </div>
+                <div class="box">
+
+                    <i class="fa-brands fa-google-play" style="color: #348d93;"></i>
+                    GooglePlay
+                </div>
+
+            </div>
+
+
+            <div id="footer_row_2_col3">
+
+
+                <!-- social icons -->
+
+                <div class="social-icons"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-icons"><i class="fa-brands fa-twitter"></i></div>
+                <div class="social-icons"><i class="fa-brands fa-threads"></i></div>
+                <div class="social-icons"><i class="fa-brands fa-facebook"></i></div>
+                <div class="social-icons"><i class="fa-brands fa-linkedin-in"></i></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mb-3" id="my-footer-row-3">“Blinkit” is owned & managed by "Blink Commerce Private Limited"
+            (formerly known as
+            Grofers India Private Limited) and is not related, linked or interconnected in whatsoever manner or nature,
+            to “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services Private
+            Limited”.</div>
+
+    </footer>
+
+    <p style="text-align: center; font-weight:bold;">Made with ❤️ Shubam</p>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
